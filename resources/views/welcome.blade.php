@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Home Page - Online Store')
+@section('title', 'Loja Virutal)
 
 @section('content')
 <div class="text-center">

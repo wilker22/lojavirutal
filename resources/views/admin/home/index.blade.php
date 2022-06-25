@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        Admin Panel - Home Page
+        Painel Administrativo
     </div>
     <div class="card-body">
         Bem vindo ao painel administrativo

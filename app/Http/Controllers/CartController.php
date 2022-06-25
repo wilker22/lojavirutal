@@ -23,8 +23,8 @@ class CartController extends Controller
         }
 
         $viewData = [];
-        $viewData['title'] = "Cart - Online Store";
-        $viewData['subtitle'] = "Shopping Cart";
+        $viewData['title'] = "Carrinho - Loja Virtual";
+        $viewData['subtitle'] = "Carrinho de Compras";
         $viewData['total'] = $total;
         $viewData['products'] = $productsInCart;
 
@@ -61,6 +61,7 @@ class CartController extends Controller
 
             $total = 0;
             $productsInCart = Product::findMany(array_keys($productsInSession));
+           
             
             foreach($productsInCart as $product){
                 $quantity = $productsInSession[$product->id];
@@ -72,22 +73,25 @@ class CartController extends Controller
                 $item->save();
 
                 $total = $total + ($product->price*$quantity);
+                
             }
 
             $order->total = $total;
             $order->save();
 
             $newBalance = Auth::user()->balance - $total;
+            
             Auth::user()->balance = $newBalance;
             Auth::user()->save();
+            //dd(Auth::user());
 
             $request->session()->forget('products');
 
             $viewData = [];
-            $viewData['title'] = "Purchase - Online Store";
-            $viewData['subtitle'] = "Purhase Status";
+            $viewData['title'] = "Pedido - Loja Virtual";
+            $viewData['subtitle'] = "Status do Pedido";
             $viewData['order'] = $order;
-
+          //  dd($viewData);
             return view('cart.purchase', compact('viewData'));
         }else{
             return redirect()->route('cart.index');

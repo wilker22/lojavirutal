@@ -20,7 +20,7 @@
             </a>
             <hr />
             <ul class="nav flex-column">
-                <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- Admin - Home</a></li>
+                <li><a href="{{ route('admin.home.index') }}" class="nav-link text-white">- Administrativo - Início</a></li>
                 <li><a href="{{ route('admin.products.index') }}" class="nav-link text-white">- Admin - Produtos</a></li>
                 <li>
                     <a href="{{ route('home.index') }}" class="mt-2 btn bg-primary text-white">Voltar para Home
@@ -45,7 +45,7 @@
             <small>
                 Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
                     href="https://wtech.eti.br">
-                    Manoel Wilker A. Silva
+                    WTech - Consultoria em TI
                 </a>
             </small>
         </div>

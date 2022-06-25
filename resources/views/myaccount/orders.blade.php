@@ -1,3 +1,5 @@
+@php use Carbon\Carbon; @endphp
+
 @extends('layouts.app')
 @section('title', $viewData['title'])
 @section('subtitle', $viewData['subtitle'])
@@ -5,18 +7,18 @@
     @forelse ($viewData["orders"] as $order)
         <div class="card mb-4">
             <div class="card-header">
-                Order #{{ $order->id }}
+                Pedido #{{ $order->id }}
             </div>
             <div class="card-body">
-                <b>Date:</b> {{ $order->createdAt }}<br />
+                <b>Data:</b> {{ Carbon::parse($order->created_at)->diffForHumans() }}<br />
                 <b>Total:</b> ${{ $order->total }}<br />
                 <table class="table table-bordered table-striped text-center mt-3">
                     <thead>
                         <tr>
                             <th scope="col">Item ID</th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Quantidade</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,8 +37,11 @@
                         @endforeach
                     </tbody>
                 </table>
+                
             </div>
+            
         </div>
+       
     @empty
         <div class="alert alert-danger" role="alert">
             Você não tem compras registradas na nossa Loja Virtual =(.

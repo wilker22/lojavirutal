@@ -10,7 +10,7 @@ class AdminHomeController extends Controller
     public function index()
     {
         $viewData = [];
-        $viewData['title'] = "Painel Administrativo - Admin Loja Virtual";
+        $viewData['title'] = "Painel Administrativo - Loja Virtual";
         return view('admin.home.index')->with('viewData', $viewData);
     }
 }

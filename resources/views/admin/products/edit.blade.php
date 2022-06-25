@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Name:</label>
+                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Nome:</label>
                             <div class="col-lg-10 col-md-6 col-sm-12">
                                 <input name="name" value="{{ $viewData['product']->name }}" type="text"
                                     class="form-control">
@@ -30,7 +30,7 @@
 
                     <div class="col">
                         <div class="mb-3 row">
-                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Price:</label>
+                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Preço:</label>
                             <div class="col-lg-10 col-md-6 col-sm-12">
                                 <input name="price" value="{{ $viewData['product']->price }}" type="number"
                                     class="form-control">
@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3 row">
-                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
+                            <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Foto:</label>
                             <div class="col-lg-10 col-md-6 col-sm-12">
                                 <input class="form-control" type="file" name="image">
                             </div>
@@ -52,10 +52,10 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Description</label>
+                    <label class="form-label">Desrição</label>
                     <textarea class="form-control" name="description" rows="3">{{ $viewData['product']->description }}</textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Edit</button>
+                <button type="submit" class="btn btn-primary">Editar</button>
             </form>
         </div>
     </div>

@@ -31,4 +31,6 @@ class Product extends Model
         return $this->hasMany(Item::class);
     }
 
+    
+
 }

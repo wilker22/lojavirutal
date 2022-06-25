@@ -12,7 +12,7 @@ class AdminProductController extends Controller
     public function index()
     {
         $viewData=[];
-        $viewData['title'] = "Painel Administrativo - Produtos - Loja Virtual";
+        $viewData['title'] = "Painel Administrativo - Produtos";
         $viewData['products'] = Product::all();
         return view('admin.products.index')->with('viewData', $viewData);
     }
@@ -48,7 +48,7 @@ class AdminProductController extends Controller
      public function edit($id)
      {
         $viewData = [];
-        $viewData["title"] = "Painel Administrativo - Editar Produto - Loja Virtual";
+        $viewData["title"] = "Painel Administrativo - Editar Produto";
         $viewData["product"] = Product::findOrFail($id);
         return view('admin.products.edit')->with("viewData", $viewData);
      }
